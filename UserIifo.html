@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<title>患者信息列表</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">   
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+   
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <ul id="myTab" class="nav nav-tabs">
+   <li class="active"><a href="#home" data-toggle="tab">
+      待安排</a></li>
+   <li><a href="#ios" data-toggle="tab">已安排</a></li>  
+   <li><a href="#Num" data-toggle="tab">号源情况</a></li>  
+</ul>
+<div id="myTabContent" class="tab-content">
+   <div class="tab-pane fade in active" id="home">
+       <div class="container">
+           <div class="row">
+               <div class="col-md-2">
+                   <button type="button" class="btn btn-default">当前医生</button>
+               </div>
+               <div class="col-md-2">
+                   <button type="button" class="btn btn-default">当前科室</button>
+               </div>
+               <div class="col-md-2">
+                   <button type="button" class="btn btn-default">当前病区</button>
+               </div>
+               <div class="col-md-6">
+
+               </div>
+           </div>
+            <div class="row"> 
+            <div class="col-md-10" ></div>  
+             <div class="col-md-2  bg-danger" style="width: 15.4%" id="SumCount">总计：3 个患者待安排
+             </div>  
+          </div> 
+       </div>
+       <div class="container">
+           <div class="row">
+               <div class="col-md-12">
+                   <table class="table table-bordered">
+                       <thead>
+                           <tr class="bg-primary">
+                               <th>
+                                   <span>患者基本信息</span>
+
+                               </th>
+                                <th>
+                                   <span>患者ID</span>
+
+                               </th>
+                               <th>
+                                   <span>床位号</span>
+
+                               </th>
+                               <th>
+                                   <span>性别</span>
+
+                               </th>
+                               <th>
+                                   <span>姓名</span>
+
+                               </th>
+                               <th>
+                                   <span>电话</span>
+
+                               </th>
+                               <th>
+                                   <span>申请科室</span>
+
+                               </th>
+                               <th>
+                                   <span>项目</span>
+                               </th>
+                               <th>
+                                   <span>项目类别</span>
+
+                               </th>
+                               <th>
+                                   <span>状态</span>
+
+                               </th>
+                           </tr>
+                       </thead>
+                       <tbody>
+                           <tr>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                                <td><input type="text" class="form-control"></td>
+                                <td><input type="text" class="form-control"></td>
+
+                           </tr>
+                           <tr>
+                               <td rowspan="2">李四 年龄 20 男</td>
+                               <td rowspan="2">P001</td>
+                               <td rowspan="2">34.12</td>
+                               <td rowspan="2">男</td>
+                               <td rowspan="2"><a href="yuyue.html">李四</a></td>
+                               <td rowspan="2">13196997170</td>
+                               <td rowspan="2">体检中心</td>
+                               <td>验血</td>
+                               <td rowspan="3">体检</td>
+                               <td>已发布</td>
+                           </tr>
+                           <tr>
+
+                               <td>胸透</td>
+                               <td>已预约</td>
+
+                           </tr>
+                           <tr>
+                               <td>王二麻 年龄 22 男</td>
+                                <td rowspan="1">P002</td>
+                               <td>34.26</td>
+                               <td>女</td>
+                               <td rowspan="1"><a href="yuyue.html">王二麻</a></td>
+                                <td rowspan="1">13196997170</td>
+                               <td rowspan="1">超声</td>
+                               <td>血压</td>
+                               <td>已发布</td>
+
+                           </tr>
+                           <tr>
+                               <td>黎明 年龄 22 男</td>
+                                <td rowspan="1">P003</td>                               
+                               <td>34.28</td>
+                               <td>男</td>
+                               <td rowspan="1"><a href="yuyue.html">黎明</a></td>
+                                <td rowspan="1">13196997170</td>
+                               <td rowspan="1">超声</td>
+                               <td>脑部CT平扫</td>
+                               <td rowspan="3">CT</td>
+                               <td>已检查</td>
+
+                           </tr>
+                           <tr>
+                               <td rowspan="2">小明 年龄 20 男</td>
+                                <td rowspan="2">P004</td>
+                               <td rowspan="2">34.22</td>
+                               <td rowspan="2">男</td>
+                               <td rowspan="2"><a href="yuyue.html">小明</a></td>
+                               <td rowspan="2">13196997170</td>
+                               <td rowspan="2">超声</td>
+                               <td>胸部CT平扫</td>
+                               <td>已预约</td>
+
+                           </tr>
+                           <tr>
+
+                               <td>腿部CT</td>
+                               <td>已检查</td>
+
+                           </tr>
+
+                       </tbody>
+                   </table>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-9">
+               </div>
+               <div class="col-md-3">
+                   <ul class="pager">
+                       <li><a href="#">上一页</a></li>
+                       <li><a href="#">下一页</a></li>
+                   </ul>
+
+               </div>
+           </div>
+       </div>     
+   </div>   
+   <div class="tab-pane fade" id="ios">
+       <div class="container">
+           <div class="row">
+               <div class="col-md-2">
+                   <button type="button" class="btn btn-default">当前医生</button>
+               </div>
+               <div class="col-md-2">
+                   <button type="button" class="btn btn-default">当前科室</button>
+               </div>
+               <div class="col-md-2">
+                   <button type="button" class="btn btn-default">当前病区</button>
+               </div>
+               <div class="col-md-6">
+
+               </div>
+           </div>
+       </div>
+
+       <div class="container">
+           <div class="row">
+               <div class="col-md-12">
+                   <table class="table table-bordered">
+                       <thead>
+                           <tr class="bg-primary">  
+                               <th>
+                                   <span>患者基本信息</span>
+
+                               </th>
+                               <th>
+                                   <span>床位号</span>
+
+                               </th>
+                               <th>
+                                   <span>性别</span>
+
+                               </th> 
+                               <th>
+                                   <span>姓名</span>
+
+                               </th>                                
+                               <th>
+                                   <span>项目</span>
+                               </th>                             
+                               <th>
+                                   <span>项目类别</span>
+
+                               </th>                                
+                           </tr>
+                       </thead>
+                       <tbody>
+                           <tr>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+
+                           </tr>
+                           <tr>
+                               <td rowspan="2">李四 年龄 20 男</td>
+                               <td rowspan="2">34.12</td>
+                               <td rowspan="2">男</td>
+                               <td rowspan="2"><a href="yuyue.html">李四</a></td>                                                            
+                               <td>验血</td>
+                               <td rowspan="3">体检</td> 
+                           </tr>
+                           <tr>                               
+                                                          
+                               <td>胸透</td>
+                                                           
+                           </tr>
+                           <tr>
+                               <td>王二麻 年龄 22 男</td>
+                               <td>34.26</td>
+                               <td>女</td>
+                               <td rowspan="1"><a href="yuyue.html">王二麻</a></td>
+                               <td>血压</td>
+                                                        
+                           </tr>
+                           <tr>
+                               <td>黎明 年龄 22 男</td>
+                               <td>34.28</td>
+                               <td>男</td>
+                               <td rowspan="1"><a href="yuyue.html">黎明</a></td>
+                               <td>脑部CT平扫</td>  
+                               <td rowspan="3">CT</td>                            
+ 
+                           </tr>
+                           <tr>
+                               <td rowspan="2">小明 年龄 20 男</td>
+                               <td rowspan="2">34.22</td>
+                               <td rowspan="2">男</td>
+                               <td rowspan="2" ><a href="yuyue.html">小明</a></td>
+                               <td>胸部CT平扫</td>
+                              
+                           </tr>
+                           <tr>                              
+                                                                
+                               <td>腿部CT</td>
+                                
+                           </tr>
+
+                       </tbody>
+                   </table>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-9">
+               </div>
+               <div class="col-md-3">
+                   <ul class="pager">
+                       <li><a href="#">上一页</a></li>
+                       <li><a href="#">下一页</a></li>
+                   </ul>
+
+               </div>
+           </div>
+       </div>
+   </div>
+    <div class="tab-pane fade " id="Num">
+       <div class="container">
+           <div class="row">
+               <div class="col-md-2">
+                   <button type="button" class="btn btn-default">当前医生</button>
+               </div>
+               <div class="col-md-2">
+                   <button type="button" class="btn btn-default">当前科室</button>
+               </div>
+               <div class="col-md-2">
+                   <button type="button" class="btn btn-default">当前病区</button>
+               </div>
+               <div class="col-md-6">
+
+               </div>
+           </div>
+            <div class="row"> 
+            <div class="col-md-10" ></div>  
+             <div class="col-md-2  bg-danger" style="width: 15.4%" id="SumCount">总计：3 个患者待安排
+             </div>  
+          </div> 
+       </div>
+       <div class="container">
+           <div class="row">
+               <div class="col-md-12">
+                   <table class="table table-bordered">
+                       <thead>
+                           <tr class="bg-primary">
+                               <th>
+                                   <span>患者基本信息</span>
+
+                               </th>
+                                <th>
+                                   <span>患者ID</span>
+
+                               </th>
+                               <th>
+                                   <span>床位号</span>
+
+                               </th>
+                               <th>
+                                   <span>性别</span>
+
+                               </th>
+                               <th>
+                                   <span>姓名</span>
+
+                               </th>
+                               <th>
+                                   <span>电话</span>
+
+                               </th>
+                               <th>
+                                   <span>申请科室</span>
+
+                               </th>
+                               <th>
+                                   <span>项目</span>
+                               </th>
+                               <th>
+                                   <span>项目类别</span>
+
+                               </th>
+                               <th>
+                                   <span>状态</span>
+
+                               </th>
+                           </tr>
+                       </thead>
+                       <tbody>
+                           <tr>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                               <td><input type="text" class="form-control"></td>
+                                <td><input type="text" class="form-control"></td>
+                                <td><input type="text" class="form-control"></td>
+
+                           </tr>
+                           <tr>
+                               <td rowspan="2">李四 年龄 20 男</td>
+                               <td rowspan="2">P001</td>
+                               <td rowspan="2">34.12</td>
+                               <td rowspan="2">男</td>
+                               <td rowspan="2"><a href="yuyue.html">李四</a></td>
+                               <td rowspan="2">13196997170</td>
+                               <td rowspan="2">体检中心</td>
+                               <td>验血</td>
+                               <td rowspan="3">体检</td>
+                               <td>已发布</td>
+                           </tr>
+                           <tr>
+
+                               <td>胸透</td>
+                               <td>已预约</td>
+
+                           </tr>
+                           <tr>
+                               <td>王二麻 年龄 22 男</td>
+                                <td rowspan="1">P002</td>
+                               <td>34.26</td>
+                               <td>女</td>
+                               <td rowspan="1"><a href="yuyue.html">王二麻</a></td>
+                                <td rowspan="1">13196997170</td>
+                               <td rowspan="1">超声</td>
+                               <td>血压</td>
+                               <td>已发布</td>
+
+                           </tr>
+                           <tr>
+                               <td>黎明 年龄 22 男</td>
+                                <td rowspan="1">P003</td>                               
+                               <td>34.28</td>
+                               <td>男</td>
+                               <td rowspan="1"><a href="yuyue.html">黎明</a></td>
+                                <td rowspan="1">13196997170</td>
+                               <td rowspan="1">超声</td>
+                               <td>脑部CT平扫</td>
+                               <td rowspan="3">CT</td>
+                               <td>已检查</td>
+
+                           </tr>
+                           <tr>
+                               <td rowspan="2">小明 年龄 20 男</td>
+                                <td rowspan="2">P004</td>
+                               <td rowspan="2">34.22</td>
+                               <td rowspan="2">男</td>
+                               <td rowspan="2"><a href="yuyue.html">小明</a></td>
+                               <td rowspan="2">13196997170</td>
+                               <td rowspan="2">超声</td>
+                               <td>胸部CT平扫</td>
+                               <td>已预约</td>
+
+                           </tr>
+                           <tr>
+
+                               <td>腿部CT</td>
+                               <td>已检查</td>
+
+                           </tr>
+
+                       </tbody>
+                   </table>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-9">
+               </div>
+               <div class="col-md-3">
+                   <ul class="pager">
+                       <li><a href="#">上一页</a></li>
+                       <li><a href="#">下一页</a></li>
+                   </ul>
+
+               </div>
+           </div>
+       </div>     
+   </div>   
+</div>
+<script>
+   $(function(){
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      // 获取已激活的标签页的名称
+      var activeTab = $(e.target).text(); 
+      // 获取前一个激活的标签页的名称
+      var previousTab = $(e.relatedTarget).text(); 
+      $(".active-tab span").html(activeTab);
+      $(".previous-tab span").html(previousTab);
+   });
+});
+</script>  
+
+    </div>
+    </div>
+ </div>
+ 
+</body>
+</html>
+             
+
+
+
+
+
+
+
+
